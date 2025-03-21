@@ -27,12 +27,12 @@ import { testimonialsData } from "./components/data/landing";
 
 const faqs = [
   {
-    question: "How is Welth different from other design tools?",
-    answer: "Unlike traditional design tools, Welth prioritizes speed and simplicity without sacrificing power. Our intelligent interface adapts to your workflow, making it feel like an extension of your creative mind."
+    question: "How is FinanceJini different from other design tools?",
+    answer: "Unlike traditional design tools, FinanceJini prioritizes speed and simplicity without sacrificing power. Our intelligent interface adapts to your workflow, making it feel like an extension of your creative mind."
   },
   {
     question: "Is there a learning curve?",
-    answer: "Welth is designed to be intuitive from day one. Most users report being productive within the first hour of use, with advanced features naturally discovered as needed."
+    answer: "FinanceJini is designed to be intuitive from day one. Most users report being productive within the first hour of use, with advanced features naturally discovered as needed."
   },
   {
     question: "How do you handle version control?",
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     question: "Can I work offline?",
-    answer: "Yes! Welth has robust offline capabilities. Your changes sync automatically when you reconnect, so your workflow is never interrupted."
+    answer: "Yes! FinanceJini has robust offline capabilities. Your changes sync automatically when you reconnect, so your workflow is never interrupted."
   }
 ];
 
@@ -118,7 +118,7 @@ export default function Home() {
               You're racing to create exceptional work, but traditional design tools slow you down with unnecessary complexity and steep learning curves.
             </p>
             <p className="text-2xl font-semibold text-blue-400">
-              That's why we built Welth.
+              That's why we built FinanceJini.
             </p>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-xl p-12 text-center max-w-4xl mx-auto border border-gray-800">
             <h2 className="text-3xl font-bold mb-6"> Ready to Take Control of Your Finances?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Be a part of thousands who are already managing their finances smarter with Welth!
+            Be a part of thousands who are already managing their finances smarter with FinanceJini!
             </p>
             <Button className="bg-blue-500 hover:bg-blue-400 text-black text-lg py-6 px-8">
               Try it for free
