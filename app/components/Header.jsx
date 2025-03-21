@@ -18,7 +18,8 @@ const Header = async()=> {
     className='fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 
     border-b'>
     <nav className='container mx-auto px-4 py-3 flex items-center justify-between'>
-    <div className="w-8 h-8 rounded-md bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center mr-2">
+      <div className="flex items-center mb-6 md:mb-0">
+        <div className="w-8 h-8 rounded-md bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center mr-2">
                   <Link href="/">
                       <Image
                       src={"/logo1.png"}
@@ -28,7 +29,10 @@ const Header = async()=> {
                       className='h-10 w-auto object-contain'
                       />
                   </Link>
+                  
                 </div>
+                <span className="text-xl text-gray-900 font-bold">FinanceJini</span></div>
+                
        
 
       <div className='flex items-center space-x-4'>

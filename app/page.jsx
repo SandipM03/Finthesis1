@@ -17,6 +17,7 @@ import {
   Code,
   CheckCircle
 } from "lucide-react";
+import { testimonialsData } from "./components/data/landing";
 
 // Updated data for the landing page
 //delete
@@ -47,7 +48,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Design Lead at Quantum",
-    quote: "Welth has transformed how our team collaborates. We've cut our design time in half while improving quality.",
+    quote: "FinanceJini has transformed how our team collaborates. We've cut our design time in half while improving quality.",
     image: "/avatars/avatar-1.png"
   },
   {
@@ -59,7 +60,7 @@ const testimonials = [
   {
     name: "Aisha Patel",
     role: "Freelance Designer",
-    quote: "As a solo designer, Welth gives me capabilities that usually require an entire team. Game-changer!",
+    quote: "As a solo designer, FinanceJini gives me capabilities that usually require an entire team. Game-changer!",
     image: "/avatars/avatar-3.png"
   }
 ];
@@ -116,7 +117,7 @@ export default function Home() {
             <p className="text-xl text-gray-500 mb-6">
               You're racing to create exceptional work, but traditional design tools slow you down with unnecessary complexity and steep learning curves.
             </p>
-            <p className="text-2xl font-semibold text-green-400">
+            <p className="text-2xl font-semibold text-blue-400">
               That's why we built Welth.
             </p>
           </div>
@@ -134,7 +135,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">
-              Questions? We've got <span className="text-green-400">answers</span>
+              Questions? We've got <span className="text-blue-400">answers</span>
             </h2>
           </div>
           <div className="max-w-3xl mx-auto">
@@ -143,7 +144,7 @@ export default function Home() {
                 <div className="p-6">
                   <div className="flex justify-between items-center">
                     <h3 className="text-lg font-medium">{faq.question}</h3>
-                    <span className="text-green-400">+</span>
+                    <span className="text-blue-400">+</span>
                   </div>
                   <p className="mt-4 text-gray-400">{faq.answer}</p>
                 </div>
@@ -163,7 +164,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonialsData.map((testimonial, index) => (
               <Card key={index} className="bg-gray-900 border-gray-800">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
@@ -176,11 +177,11 @@ export default function Home() {
                       />
                     </div>
                     <div className="ml-4">
-                      <h3 className="font-semibold">{testimonial.name}</h3>
-                      <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                      <h3 className="font-semibold text-white">{testimonial.name}</h3>
+                      <p className="text-gray-400 text-sm">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="text-gray-400 italic">"{testimonial.quote}"</p>
+                  <p className="text-gray-300 italic">"{testimonial.quote}"</p>
                 </CardContent>
               </Card>
             ))}
@@ -192,15 +193,15 @@ export default function Home() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-xl p-12 text-center max-w-4xl mx-auto border border-gray-800">
-            <h2 className="text-3xl font-bold mb-6">Ready to transform your workflow?</h2>
+            <h2 className="text-3xl font-bold mb-6"> Ready to Take Control of Your Finances?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of designers who've already made the switch to Welth.
+            Be a part of thousands who are already managing their finances smarter with Welth!
             </p>
-            <Button className="bg-green-500 hover:bg-green-400 text-black text-lg py-6 px-8">
+            <Button className="bg-blue-500 hover:bg-blue-400 text-black text-lg py-6 px-8">
               Try it for free
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <p className="mt-4 text-gray-500">No credit card required</p>
+            
           </div>
         </div>
       </section>
@@ -221,7 +222,7 @@ export default function Home() {
                   />
                 </Link>
               </div>
-              <span className="text-xl font-bold">Finance_Jini</span>
+              <span className="text-xl font-bold">FinanceJini</span>
             </div>
             <div className="flex space-x-6 text-sm text-blue-50">
               <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
