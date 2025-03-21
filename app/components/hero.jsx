@@ -27,41 +27,46 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="pt-40 pb-20 px-4">
-      <div className="container mx-auto text-center">
-        <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 gradient-title">
-          Manage Your Finances <br /> with GENAI
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          An AI-powered financial management platform that helps you track,
-          analyze, and optimize your spending with real-time insights.
-        </p>
-        <div className="flex justify-center space-x-4">
-          <Link href="/dashboard">
-            <Button size="lg" className="px-8">
-              Get Started
-            </Button>
-          </Link>
-          <Link href="https://www.youtube.com/@sandipmandal5031">
-            <Button size="lg" variant="outline" className="px-8">
-              Watch Demo
-            </Button>
-          </Link>
-        </div>
-        <div className="hero-image-wrapper mt-5 md:mt-0">
-          <div ref={imageRef} className="hero-image">
-            <Image
-              src="/banner.jpg"
-              width={1280}
-              height={720}
-              alt="Dashboard Preview"
-              className="rounded-lg shadow-2xl border mx-auto"
-              priority
-            />
+    <section className="pt-32 pb-24 border-b border-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center text-center mb-8">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500 text-purple-300 text-sm mb-6">
+              <span className="bg-purple-400 w-2 h-2 rounded-full mr-2"></span>
+              start for free
+            </span>
+            
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Manage Your Finances <br /> with GENAI
+            </h1>
+            
+            <p className="text-xl text-gray-400 max-w-2xl mb-10">
+            An AI-powered financial management platform that helps you track,
+            analyze, and optimize your spending with real-time insights.
+            </p>
+            
+            <div className="flex justify-center space-x-4">
+              <Link href="/dashboard">
+                <Button size="lg" className="px-6">
+                  Get Started
+                </Button>
+              </Link>
+              <Link href="https://www.youtube.com/@sandipmandal5031">
+              <Button size="lg" className="bg-blue-400 hover:bg-blue-300 text-black px-6">Watch Demo</Button>
+              </Link>
+            </div>
+            
+            {/* <div className="mt-12 text-gray-500 text-sm">
+              Already chosen by these market leaders
+              <div className="flex items-center justify-center mt-6 space-x-8">
+                <div className="text-gray-400 font-semibold">Quantum</div>
+                <div className="text-gray-400 font-semibold">Acme Corp</div>
+                <div className="text-gray-400 font-semibold">Valley Media</div>
+                <div className="text-gray-400 font-semibold">PULSE</div>
+              </div>
+            </div> */}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 

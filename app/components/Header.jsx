@@ -17,17 +17,20 @@ const Header = async()=> {
     <div 
     className='fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 
     border-b'>
-      <nav 
-      className='container mx-auto px-4 py-4 flex items-center justify-between'>
-        <Link href="/">
-        <Image
-        src={"/logo.png"}
-        alt="my logo"
-        height={60}
-        width={200}
-        className='h-12 w-auto object-contain'
-        />
-        </Link>
+    <nav className='container mx-auto px-4 py-3 flex items-center justify-between'>
+    <div className="w-8 h-8 rounded-md bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center mr-2">
+                  <Link href="/">
+                      <Image
+                      src={"/logo1.png"}
+                      alt="my logo"
+                      height={90}
+                      width={300}
+                      className='h-10 w-auto object-contain'
+                      />
+                  </Link>
+                </div>
+       
+
       <div className='flex items-center space-x-4'>
         <SignedIn>
           <Link href="/dashboard" className='text-gray-600 hover:text-blue-500 flex  items-center gap-2'>
