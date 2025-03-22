@@ -50,20 +50,7 @@ const HeroSection = () => {
                   Get Started
                 </Button>
               </Link>
-              <Link href="https://www.youtube.com/@sandipmandal5031">
-              <Button size="lg" className="bg-blue-400 hover:bg-blue-300 text-black px-6">Watch Demo</Button>
-              </Link>
             </div>
-            
-            {/* <div className="mt-12 text-gray-500 text-sm">
-              Already chosen by these market leaders
-              <div className="flex items-center justify-center mt-6 space-x-8">
-                <div className="text-gray-400 font-semibold">Quantum</div>
-                <div className="text-gray-400 font-semibold">Acme Corp</div>
-                <div className="text-gray-400 font-semibold">Valley Media</div>
-                <div className="text-gray-400 font-semibold">PULSE</div>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
