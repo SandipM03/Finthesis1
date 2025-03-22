@@ -18,6 +18,8 @@ import {
   CheckCircle
 } from "lucide-react";
 import { testimonialsData } from "./components/data/landing";
+import { Marquee } from "@/components/magicui/marquee";
+import { cn } from "@/lib/utils";
 
 // Updated data for the landing page
 //delete
@@ -44,98 +46,142 @@ const faqs = [
   }
 ];
 
-const testimonials = [
+const reviews = [
   {
-    name: "Sarah Johnson",
-    role: "Design Lead at Quantum",
-    quote: "FinanceJini has transformed how our team collaborates. We've cut our design time in half while improving quality.",
-    image: "/avatars/avatar-1.png"
+    name: "Jack",
+    username: "@jack",
+    body: "I've never seen anything like this before. It's amazing. I love it.",
+    img: "https://avatar.vercel.sh/jack",
   },
   {
-    name: "Michael Chen",
-    role: "Product Manager at Pulse",
-    quote: "The integrations with our existing tools made adoption painless. Now I can't imagine working without it.",
-    image: "/avatars/avatar-2.png"
+    name: "Jill",
+    username: "@jill",
+    body: "I don't know what to say. I'm speechless. This is amazing.",
+    img: "https://avatar.vercel.sh/jill",
   },
   {
-    name: "Aisha Patel",
-    role: "Freelance Designer",
-    quote: "As a solo designer, FinanceJini gives me capabilities that usually require an entire team. Game-changer!",
-    image: "/avatars/avatar-3.png"
-  }
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/john",
+  },
+  {
+    name: "Jane",
+    username: "@jane",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  {
+    name: "Jenny",
+    username: "@jenny",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  {
+    name: "James",
+    username: "@james",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/james",
+  },
 ];
+
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
+
+const ReviewCard = ({
+  img,
+  name,
+  username,
+  body,
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+        </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
+  );
+};
+ 
 
 export default function Home() {
   return (
-    <div className="bg-gray-950 text-gray-100 min-h-screen">
+    <div className="bg-gray-950 text-gray-100 min-h-screen px-40">
       <HeroSection />
       {/* Use HoverEffect component with items prop */}
-      <HoverEffect 
+      <HoverEffect
         items={[
           {
-            title: "Real-time Collaboration",
-            description: "Work together seamlessly with teammates in real-time editing",
-            link: "/feature1"
+            title: "Expense Tracking",
+            description: "Monitor transactions in real-time with automatic bank synchronization",
+            link: "/expense-tracking",
           },
           {
-            title: "Keyboard Quick Actions",
-            description: "Powerful commands to help you design faster and stay in the flow",
-            link: "/feature2"
+            title: "Budget Planning",
+            description: "Create custom budgets with category limits and spending alerts",
+            link: "/budgeting-tools",
           },
           {
-            title: "Asset Library",
-            description: "Manage all your design resources in one organized library",
-            link: "/feature3"
+            title: "Financial Reports",
+            description: "Generate detailed income/expense reports with interactive visual charts",
+            link: "/financial-reports",
           },
           {
-            title: "Code Preview",
-            description: "Export your designs with production-ready code instantly",
-            link: "/feature4"
+            title: "Bill Reminders",
+            description: "Never miss a payment with smart due date notifications",
+            link: "/bill-reminders",
           },
           {
-            title: "Smart Guides",
-            description: "Intelligent alignment tools that make pixel-perfect designs effortless",
-            link: "/feature5"
+            title: "Investment Tracking",
+            description: "Monitor your portfolio performance and market trends",
+            link: "/investments",
           },
           {
-            title: "Auto Layout",
-            description: "Create responsive designs that adapt to any screen size automatically",
-            link: "/feature6"
-          }
-        ]} 
+            title: "Savings Goals",
+            description: "Set and achieve financial targets with progress tracking",
+            link: "/savings-goals",
+          },
+        ]}
       />
       {/* Value Proposition */}
       <section className="py-24 border-b border-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm mb-6">
-              REVOLUTIONARY DESIGN
-            </span>
-            <h2 className="text-4xl font-bold mb-6">
-              Your creative process deserves better.
-            </h2>
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm mb-6">REVOLUTIONARY DESIGN</span>
+            <h2 className="text-4xl font-bold mb-6">Your creative process deserves better.</h2>
             <p className="text-xl text-gray-500 mb-6">
               You're racing to create exceptional work, but traditional design tools slow you down with unnecessary complexity and steep learning curves.
             </p>
-            <p className="text-2xl font-semibold text-blue-400">
-              That's why we built FinanceJini.
-            </p>
+            <p className="text-2xl font-semibold text-green-400">That's why we built FinanceJini.</p>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      
 
       {/* Integrations Section */}
-      
 
       {/* FAQ Section */}
       <section id="faq" className="py-24 border-b border-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">
-              Questions? We've got <span className="text-blue-400">answers</span>
+              Questions? We've got <span className="text-green-400">answers</span>
             </h2>
           </div>
           <div className="max-w-3xl mx-auto">
@@ -144,7 +190,7 @@ export default function Home() {
                 <div className="p-6">
                   <div className="flex justify-between items-center">
                     <h3 className="text-lg font-medium">{faq.question}</h3>
-                    <span className="text-blue-400">+</span>
+                    <span className="text-green-400">+</span>
                   </div>
                   <p className="mt-4 text-gray-400">{faq.answer}</p>
                 </div>
@@ -155,53 +201,31 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 border-b border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">What our users say</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Join thousands who've transformed their creative workflow
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonialsData.map((testimonial, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-800">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gray-800 overflow-hidden relative">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="font-semibold text-white">{testimonial.name}</h3>
-                      <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-300 italic">"{testimonial.quote}"</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {firstRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:10s]">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+      </div>
 
       {/* CTA Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-xl p-12 text-center max-w-4xl mx-auto border border-gray-800">
             <h2 className="text-3xl font-bold mb-6"> Ready to Take Control of Your Finances?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Be a part of thousands who are already managing their finances smarter with FinanceJini!
-            </p>
-            <Button className="bg-blue-500 hover:bg-blue-400 text-black text-lg py-6 px-8">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Be a part of thousands who are already managing their finances smarter with FinanceJini!</p>
+            <Button className="bg-green-500 hover:bg-green-400 text-black text-lg py-6 px-8">
               Try it for free
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            
           </div>
         </div>
       </section>
@@ -213,21 +237,21 @@ export default function Home() {
             <div className="flex items-center mb-6 md:mb-0">
               <div className="w-8 h-8 rounded-md bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center mr-2">
                 <Link href="/">
-                  <Image
-                    src={"/logo1.png"}
-                    alt="my logo"
-                    height={90}
-                    width={300}
-                    className='h-10 w-auto object-contain'
-                  />
+                  <Image src={"/logo1.png"} alt="my logo" height={90} width={300} className="h-10 w-auto object-contain" />
                 </Link>
               </div>
               <span className="text-xl font-bold">FinanceJini</span>
             </div>
             <div className="flex space-x-6 text-sm text-blue-50">
-              <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+              <Link href="/privacy" className="hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-white transition-colors">
+                Terms & Conditions
+              </Link>
+              <Link href="/contact" className="hover:text-white transition-colors">
+                Contact
+              </Link>
             </div>
             <footer className="py-12">
               <div className="container mx-auto px-4 text-center text-blue-50">

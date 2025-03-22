@@ -15,7 +15,7 @@ const Header = async()=> {
   await checkUser();
   return (
     <div 
-    className='fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 
+    className='fixed top-0 w-full backdrop-blur-md z-50 
     border-b'>
     <nav className='container mx-auto px-4 py-3 flex items-center justify-between'>
       <div className="flex items-center mb-6 md:mb-0">
