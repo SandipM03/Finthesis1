@@ -4,6 +4,7 @@ import Header from "../app/components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "./components/theme-provider";
+import { FloatingChat } from "@/components/floatingChat";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,6 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-
           <head>
             <link rel="icon" href="/logo1.png" sizes="any" />
           </head>
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
 
-           
+            <FloatingChat />
           </body>
         </ThemeProvider>
       </html>
