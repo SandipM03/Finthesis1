@@ -31,7 +31,7 @@ const Header = async()=> {
                   </Link>
                   
                 </div>
-                <span className="text-xl text-gray-900 font-bold">FinanceJini</span></div>
+                <span className="text-xl text-green-400 font-bold">FinanceJini</span></div>
                 
        
 

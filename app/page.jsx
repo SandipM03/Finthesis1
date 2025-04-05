@@ -22,8 +22,8 @@ import { Marquee } from "@/components/magicui/marquee";
 import { cn } from "@/lib/utils";
 
 // Updated data for the landing page
-//delete
-
+//deleGte
+import GradientText from "../components/GradientText"
 
 
 
@@ -162,7 +162,18 @@ export default function Home() {
       <section className="py-24 border-b border-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm mb-6">REVOLUTIONARY DESIGN</span>
+            
+            {/* <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-sm mb-6"></span>
+            <ShinyText text="" disabled={false} speed={3} className='custom-class' /> */}
+            <GradientText
+                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                animationSpeed={3}
+                showBorder={false}
+                className="custom-class py-1 text-2xl"
+              >
+              REVOLUTIONARY DESIGN
+              </GradientText>
+            
             <h2 className="text-4xl font-bold mb-6">Your creative process deserves better.</h2>
             <p className="text-xl text-gray-500 mb-6">
               You're racing to create exceptional work, but traditional design tools slow you down with unnecessary complexity and steep learning curves.
@@ -255,7 +266,7 @@ export default function Home() {
             </div>
             <footer className="py-12">
               <div className="container mx-auto px-4 text-center text-blue-50">
-                <p>Made with 💗 by Zenux Studio</p>
+                <p>Made with 💗 by Team Zenux</p>
               </div>
             </footer>
           </div>

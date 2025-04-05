@@ -36,7 +36,7 @@ const HeroSection = () => {
             </span>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Manage Your Finances <br /> with GENAI
+            Manage Your Finances <br /> with <span className="text-green-400">FinanceJini</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-2xl mb-10">
