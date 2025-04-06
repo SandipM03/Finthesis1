@@ -34,7 +34,7 @@ export function FloatingChat() {
       {isOpen ? (
         <Card className="w-80 sm:w-96 shadow-lg">
           <CardHeader className="p-4 border-b flex flex-row justify-between items-center">
-            <h3 className="font-semibold">Gemini Assistant</h3>
+            <h3 className="font-semibold">FinanceJini Assistant</h3>
             <Button variant="ghost" size="icon" onClick={toggleChat}>
               <X className="h-4 w-4" />
             </Button>
