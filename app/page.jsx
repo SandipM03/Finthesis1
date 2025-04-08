@@ -29,20 +29,20 @@ import GradientText from "../components/GradientText"
 
 const faqs = [
   {
-    question: "How is FinanceJini different from other design tools?",
-    answer: "Unlike traditional design tools, FinanceJini prioritizes speed and simplicity without sacrificing power. Our intelligent interface adapts to your workflow, making it feel like an extension of your creative mind."
+    question: "How is FinanceJini different from other financial tools?",
+    answer: "Unlike traditional financial tools, FinanceJini combines financial literacy, personalized investment guidance, and transaction tracking in one intuitive platform. Its AI-powered interface adapts to your needs, making complex financial decisions simple and accessible."
   },
   {
-    question: "Is there a learning curve?",
-    answer: "FinanceJini is designed to be intuitive from day one. Most users report being productive within the first hour of use, with advanced features naturally discovered as needed."
+    question: "What makes FinanceJini unique?",
+    answer: "FinanceJini’s USP lies in its holistic approach—combining financial education, personalized advice, multilingual support, and AI-driven insights into one scalable solution. It’s not just a tool; it’s your financial companion."
   },
   {
-    question: "How do you handle version control?",
-    answer: "We offer built-in version history, allowing you to track changes, create branches, and collaborate without fear of losing work. Our Git-like approach is familiar to developers but accessible to everyone."
+    question: "Can FinanceJini help me invest?",
+    answer: "Absolutely! FinanceJini’s AI-powered advisory suggests investment products tailored to your goals, income, and risk preferences. It also allows you to explore options by filtering for risk level, return potential, and investment duration."
   },
   {
-    question: "Can I work offline?",
-    answer: "Yes! FinanceJini has robust offline capabilities. Your changes sync automatically when you reconnect, so your workflow is never interrupted."
+    question: "How does FinanceJini ensure data security?",
+    answer: "FinanceJini uses robust authentication methods like Clerk and encrypts all user data to ensure your financial information is safe and secure."
   }
 ];
 
@@ -171,14 +171,14 @@ export default function Home() {
                 showBorder={false}
                 className="custom-class py-1 text-2xl"
               >
-              REVOLUTIONARY DESIGN
+              EMPOWERING INVESTORS
               </GradientText>
             
             <h2 className="text-4xl font-bold mb-6">Your creative process deserves better.</h2>
             <p className="text-xl text-gray-500 mb-6">
-              You're racing to create exceptional work, but traditional design tools slow you down with unnecessary complexity and steep learning curves.
+            Investing should be accessible to everyone, yet many individuals struggle with financial literacy and personalized guidance. Traditional financial advisory services are often expensive and not scalable, leaving millions without the support they need to make informed decisions.
             </p>
-            <p className="text-2xl font-semibold text-green-400">That's why we built FinanceJini.</p>
+            <p className="text-2xl font-semibold text-green-400">That&#39;s why we built FinanceJini.</p>
           </div>
         </div>
       </section>
