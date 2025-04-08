@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💰Welcome to FinanceJini, your AI-powered financial assistance platform. Let FinanceJini guide you toward smarter financial decisions and a secure future!
 
-## Getting Started
+A next-gen financial assistant web application that empowers users to track expenses, manage accounts, receive personalized investment advice, and explore financial products — all with AI-powered insights and support for Indian languages.
 
-First, run the development server:
+![Tech Stack](https://img.shields.io/badge/Next.js-15-blue.svg) ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-green) ![Clerk](https://img.shields.io/badge/Auth-Clerk-orange) ![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-lightblue) ![Tailwind](https://img.shields.io/badge/Styled%20With-TailwindCSS-38bdf8)
+
+---
+
+## 🚀 Features
+
+- 🛂 **Secure Auth** – Login/Signup with Clerk
+- 🌐 **Language Support** – Choose your preferred Indian language
+- 📊 **Dashboard** – View account summaries, income, and expenses
+- 🧾 **Smart Transactions** – Upload bill images and auto-detect amount/type using AI
+- 🔁 **Recurring Transactions** – Add recurring incomes/expenses
+- 📈 **Visual Insights** – Interactive monthly income & expense graphs
+- 💬 **Finance Chatbot** – Ask finance-related questions via AI
+- 💼 **Personalized Advisory** – Investment suggestions based on goals, income, and risk appetite
+- 🔎 **Product Discovery** – Filter-based investment product exploration
+- 📤 **Email Support** – Receive summaries and alerts (Resend integration)
+
+---
+
+## 🧠 Powered By
+
+| Technology      | Role |
+|------------------|------|
+| **Next.js 15**       | Frontend & Backend Framework |
+| **React 19 (RC)**     | UI Development |
+| **Tailwind CSS**      | Styling |
+| **Supabase**          | Database, Auth, Realtime |
+| **Prisma** *(optional)* | ORM Layer |
+| **Clerk**             | Authentication & Session Management |
+| **Google Gemini API** | AI-Powered Chat & Advisor |
+| **Recharts**          | Graphs & Visuals |
+| **Resend + React Email** | Transactional Emails |
+| **Framer Motion**     | Animations |
+| **Zod + React Hook Form** | Form Validation |
+| **Radix UI**          | Headless UI Components |
+| **Inngest**           | Background Jobs (future scope) |
+
+---
+
+
+
+
+## 🛠️ Getting Started
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/finance-platform.git
+cd finance-platform
+
 ```
+### 2. Install dependencies
+```bash
+npm install
+```
+### 3.Set up environment variables
+Create a .env.local file with the following:
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=s
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+DATABASE_URL=""
 
-To learn more about Next.js, take a look at the following resources:
+# Direct connection to the database. Used for migrations.
+DIRECT_URL=""
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ARCJET_KEY=
+GOOGLE_GENERATIVE_AI_API_KEY=
+```
+### 4. Run the app
+```bash
+npm run dev
+```
+### 🌐 Live Demo
+https://financejini.zenux.live/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📚 Documentation
+- Clerk Docs: https://clerk.com/docs
 
-## Deploy on Vercel
+- Supabase Docs: https://supabase.com/docs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Gemini AI Docs: https://ai.google.dev/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Prisma: https://www.prisma.io/docs
+
+- Tailwind: https://tailwindcss.com/docs
+
+### 🙌 Acknowledgments
+- Google for Gemini APIs
+
+- Supabase for blazing-fast backend
+
+- Clerk for seamless authentication
+
+- React & Next.js community
